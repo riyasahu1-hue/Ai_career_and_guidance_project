@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Career Guidance</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+    <div class="left-section">
+
+        <h1>AI Career Guidance</h1>
+
+        <p>
+            Discover the best career path using Artificial Intelligence.
+            Get smart recommendations based on your skills,
+            education and experience.
+        </p>
+
+    </div>
+
+    <div class="right-section">
+
+        <div class="form-card">
+
+            <h2>Career Recommendation</h2>
+
+            <!-- SKILLS -->
+
+            <div class="input-group">
+
+                <label>Select Skills</label>
+
+                <div class="dropdown">
+
+                    <button type="button"
+                        class="dropdown-btn"
+                        onclick="toggleDropdown('skillsDropdown')">
+
+                        Choose Skills
+                    </button>
+
+                    <div class="dropdown-content"
+                        id="skillsDropdown">
+
+                        <label><input type="checkbox" value="Python"> Python</label>
+
+                        <label><input type="checkbox" value="Machine Learning"> Machine Learning</label>
+
+                        <label><input type="checkbox" value="Artificial Intelligence"> Artificial Intelligence</label>
+
+                        <label><input type="checkbox" value="Deep Learning"> Deep Learning</label>
+
+                        <label><input type="checkbox" value="Data Analysis"> Data Analysis</label>
+
+                        <label><input type="checkbox" value="SQL"> SQL</label>
+
+                        <label><input type="checkbox" value="Java"> Java</label>
+
+                        <label><input type="checkbox" value="Cyber Security"> Cyber Security</label>
+
+                        <label><input type="checkbox" value="Cloud Computing"> Cloud Computing</label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- EDUCATION -->
+
+            <div class="input-group">
+
+                <label>Education</label>
+
+                <select id="education">
+
+                    <option>Bachelor's Degree</option>
+                    <option>Master's Degree</option>
+                    <option>Certification</option>
+                    <option>PhD</option>
+
+                </select>
+
+            </div>
+
+            <!-- INDUSTRY -->
+
+            <div class="input-group">
+
+                <label>Select Industry</label>
+
+                <div class="dropdown">
+
+                    <button type="button"
+                        class="dropdown-btn"
+                        onclick="toggleDropdown('industryDropdown')">
+
+                        Choose Industry
+                    </button>
+
+                    <div class="dropdown-content"
+                        id="industryDropdown">
+
+                        <label><input type="checkbox" value="Artificial Intelligence"> Artificial Intelligence</label>
+
+                        <label><input type="checkbox" value="Software Development"> Software Development</label>
+
+                        <label><input type="checkbox" value="Data Science"> Data Science</label>
+
+                        <label><input type="checkbox" value="Cyber Security"> Cyber Security</label>
+
+                        <label><input type="checkbox" value="Cloud Computing"> Cloud Computing</label>
+
+                        <label><input type="checkbox" value="Healthcare"> Healthcare</label>
+
+                        <label><input type="checkbox" value="Finance"> Finance</label>
+
+                        <label><input type="checkbox" value="Education"> Education</label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- EXPERIENCE -->
+
+            <div class="input-group">
+
+                <label>Experience Level</label>
+
+                <select id="experience">
+
+                    <option>Entry Level</option>
+                    <option>Mid Level</option>
+                    <option>Senior Level</option>
+                    <option>Director</option>
+
+                </select>
+
+            </div>
+
+            <!-- BUTTON -->
+
+            <button onclick="predictCareer()"
+                class="predict-btn">
+
+                Predict Career
+            </button>
+
+            <!-- RESULT -->
+
+            <div id="result"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
